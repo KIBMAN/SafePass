@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login_page.LoginController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#3a64c6" layoutX="197.0" layoutY="91.0" smooth="false" stroke="#220e0e" strokeType="OUTSIDE" strokeWidth="0.0" text="Safe Pass" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="user_name_TextField" layoutX="201.0" layoutY="135.0" prefHeight="6.0" prefWidth="173.0" promptText="Username">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Button fx:id="loginButton" layoutX="122.0" layoutY="273.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="258.0" style="-fx-background-color: #346beb;" text="Login" textFill="#fcfcfc" />
+            <Label layoutX="122.0" layoutY="139.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="189.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="EnterPasswordField" layoutX="201.0" layoutY="187.0" prefHeight="6.0" prefWidth="173.0" promptText="Password" />
+            <Button fx:id="cancelButton" layoutX="122.0" layoutY="321.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="258.0" style="-fx-background-color: #346beb;" text="Cancel" textFill="#fcfcfc" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="160.0" layoutY="239.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
