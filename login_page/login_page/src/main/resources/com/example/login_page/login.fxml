@@ -42,7 +42,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="createaccountButton" layoutX="200.0" layoutY="313.0" mnemonicParsing="false" onAction="#createaccountButtonOnAction" prefHeight="25.0" prefWidth="103.0" text="Create Account" />
+            <Button fx:id="createaccountButton" layoutX="200.0" layoutY="313.0" mnemonicParsing="false" onAction="#createAccountForm" prefHeight="25.0" prefWidth="103.0" text="Create Account" />
          </children>
       </AnchorPane>
    </center>
