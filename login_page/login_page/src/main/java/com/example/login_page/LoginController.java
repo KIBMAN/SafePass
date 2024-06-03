@@ -2,13 +2,17 @@ package com.example.login_page;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -26,6 +30,11 @@ public class LoginController implements Initializable {
     public void cancelButtonOnAction(ActionEvent event){
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
+    }
+    @FXML
+    private Button createaccountButton;
+    public void createaccountButtonOnAction(ActionEvent event) throws IOException {
+        createAccountForm();
     }
 
     @FXML
@@ -55,7 +64,8 @@ public class LoginController implements Initializable {
 
             while(queryResult.next()){
                 if(queryResult.getInt(1)==1){
-                    loginMessageLabel.setText("Congratualations!!");
+                    //loginMessageLabel.setText("Congratualations!!");
+                    createAccountForm();
                 }else{
                     loginMessageLabel.setText("Invalid login. Please try again");
                 }
@@ -73,6 +83,21 @@ public class LoginController implements Initializable {
             validateLogin();
         }else{
             loginMessageLabel.setText("Please enter User Name and Password");
+        }
+    }
+
+    public void createAccountForm(){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("register.fxml"));
+            Stage registerStage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 600, 554);
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(scene);
+            registerStage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
         }
     }
 
