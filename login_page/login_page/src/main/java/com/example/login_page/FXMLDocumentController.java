@@ -150,7 +150,8 @@ public class FXMLDocumentController implements Initializable {
             String value1 = txt_id.getText();
             String value2 = txt_application.getText();
             String value3 = txt_username.getText();
-            String value4 = txt_password.getText();
+            String encryptedPassword1 = EncryptUtils.encrypt(txt_password.getText(), Security_Key);
+            String value4 = encryptedPassword1;
             String value5 = txt_comment.getText();
             String sql = "update users set user_id= '" + value1 + "', application= '" + value2 + "', username= '" +
                     value3 + "', password= '" + value4 + "', comment= '" + value5 + "' where user_id='" + value1 + "' ";
