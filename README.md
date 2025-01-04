@@ -82,13 +82,10 @@ SafePass features a user-friendly interface designed with JavaFX:
 4. **Multi-Factor Authentication**: Enhance login security.
 
 ---
-
 Developed by:
-- Mueed Ibne Sami
-- Miraj Mahmud Mahee
-- Kazi Akib Zaoad
+We 3 students from Islamic University of Technology, made this app as a project for our "CSE 4402: Visual Programming Lab" Course.
+- Mueed Ibne Sami (210041149)
+- Miraj Mahmud Mahee (210041101)
+- Kazi Akib Zaoad (21004117)
 
----
-
-Feel free to contribute or report issues to improve SafePass!
 
